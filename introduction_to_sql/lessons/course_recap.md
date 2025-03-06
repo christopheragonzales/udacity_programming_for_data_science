@@ -44,6 +44,14 @@
 | **SQL View**| Virtual tables that are derived from one or more base tables. The term virtual means that the views do not exist physically in a database. Instead, they reside in the memory (not database), just like the result of any query stored in memory |
 | **Subquery** | A SQL query qhere one SQL query is nested within another query |
 | **WITH Subquery** | This subquery is used when you'd like to "pseudo-create" a table from an existing table and visually scope the temporary table at the top of the larger query |
+| **CAST** | Converts a value of any type into a specific, different type |
+| **COALESCE** | Returns the first non-null value in a list |
+| **CONCAT** | Adds two or more expressions together |
+| **LEFT** | Extracts a number of characters from a string starting from the left |
+| **POSITION** | Returns the position of the first occurrence of a substring in a string |
+| **RIGHT** | Extracts a number of characters from a string starting from the right |
+| **STRPOS** | Returns the position of a substring within a string |
+| **SUBSTR** | Extracts a substring from a string (starting at any position) |
 
 ## Other Tips
 
