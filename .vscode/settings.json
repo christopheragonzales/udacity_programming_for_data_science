@@ -1,3 +1,5 @@
 {
-    "python.defaultInterpreterPath": "/home/chris-gonzales/miniconda3/envs/udacity_prog_for_ds_env"
+    "python.defaultInterpreterPath": "/home/chris-gonzales/miniconda3/envs/udacity_prog_for_ds_env",
+    "gitlens.graph.searchItemLimit": 0,
+    "database-client.defaultSelectLimit": 20000
 }
