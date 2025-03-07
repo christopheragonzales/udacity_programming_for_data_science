@@ -4,5 +4,8 @@ channels:
   - defaults
 dependencies:
   - python>=3.10
-  - bs4
-  - requests
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - ipykernel

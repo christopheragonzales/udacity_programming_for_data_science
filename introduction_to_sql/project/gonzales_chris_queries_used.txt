@@ -1,0 +1,112 @@
+/* Query 1 - query used for first insight*/
+SELECT t1.genre
+       , t1.standard_quartile
+       , COUNT(*)
+  FROM (SELECT fa.category_id
+               , fa.film_id
+               , f.title film_title
+               , c.name genre
+               , f.rental_duration
+               , NTILE(4) OVER (ORDER BY f.rental_duration) AS standard_quartile
+          FROM film_category fa
+          JOIN film f
+            ON fa.film_id = f.film_id
+          JOIN category c
+            ON fa.category_id = c.category_id
+         WHERE c.name IN ('Animation', 'Children', 'Classics', 'Comedy', 'Family', 'Music')
+    ) t1
+ GROUP BY t1.standard_quartile
+         , t1.genre
+ ORDER BY 1
+        , 2
+        
+/*Query 2 - query used for second insight*/
+WITH RENTAL_DATA AS
+(
+  SELECT rental_id
+       , DATE_PART('MONTH', rental_date) "month"
+       , DATE_PART('YEAR', rental_date) "year"
+       , staff_id
+  FROM rental r
+),
+
+STAFF_DATA AS
+(
+  SELECT r.*
+       , store_id
+  FROM RENTAL_DATA r
+    JOIN staff s ON r.staff_id = s.staff_id
+)
+
+SELECT "month"
+     , "year"
+     , store_id
+     , COUNT(rental_id) "rentals"
+FROM STAFF_DATA
+GROUP BY "month"
+       , "year"
+       , store_id
+ORDER BY "year"
+       , "month"
+       , store_id;
+       
+/*Query 3 - query used for third insight*/
+WITH PAYMENT_DATA AS
+(
+  SELECT DATE_TRUNC('month', p.payment_date) AS pay_mon
+       , CONCAT(c.first_name, ' ', c.last_name) AS fullname
+       , p.amount
+  FROM payment p
+    JOIN customer c ON p.customer_id = c.customer_id
+  WHERE DATE_PART('year', p.payment_date) = 2007
+),
+
+TOP_10_CUST AS (
+  SELECT pay_mon
+       , fullname
+       , COUNT(fullname) AS num_payments
+       , SUM(amount) AS total_payment
+  FROM PAYMENT_DATA
+  WHERE fullname IN (
+        SELECT fullname 
+        FROM PAYMENT_DATA 
+        GROUP BY fullname 
+        ORDER BY SUM(amount) DESC 
+        LIMIT 10
+        )
+  GROUP BY pay_mon
+         , fullname
+)
+
+SELECT *
+       , total_payment - LAG(total_payment, 1) OVER (PARTITION BY fullname ORDER BY pay_mon) AS delta_payment
+FROM TOP_10_CUST
+ORDER BY 2
+       , 1
+       
+/* Query 4 - used to query for insight 4*/
+SELECT t1.film_title
+     , t1.genre
+     , COUNT(t2.rental_id) rental_count
+FROM (
+  SELECT fc.film_id
+       , fc.category_id
+       , f.title film_title
+       , c.name genre
+  FROM film_category fc
+    JOIN film f ON fc.film_id = f.film_id
+    JOIN category c ON fc.category_id = c.category_id
+  WHERE c.name IN ('Animation', 'Children', 'Classics', 'Comedy', 'Family', 'Music')
+) t1
+  JOIN (
+    SELECT i.inventory_id
+         , i.film_id
+         , r.rental_id
+    FROM inventory i
+      JOIN rental r ON i.inventory_id = r.inventory_id
+  ) t2 ON t2.film_id = t1.film_id
+GROUP BY t1.film_title
+       , t1.genre
+ORDER BY 3 DESC
+       , 2 ASC
+LIMIT 25;
