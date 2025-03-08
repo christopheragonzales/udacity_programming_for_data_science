@@ -20,5 +20,6 @@ FROM (
   ) t2 ON t2.film_id = t1.film_id
 GROUP BY t1.film_title
        , t1.genre
-ORDER BY 2
-       , 1 ASC
+ORDER BY 3 DESC
+       , 2 ASC
+LIMIT 25;

@@ -21,6 +21,7 @@ The purpose of this repo is to capture the projects associated with the Udacity 
     - [Register PostgreSQL Server in pgAdmin4](#register-postgresql-server-in-pgadmin4)
   - [Environment.yml](#environmentyml)
   - [Parch and Posey Entity Relationship Diagram](#parch-and-posey-entity-relationship-diagram)
+- [Database Schema ER Diagram](#database-schema-er-diagram)
 
 ## Lessons
 
@@ -30,9 +31,10 @@ The purpose of this repo is to capture the projects associated with the Udacity 
 
 #### SQL Queries
 
-- This folder holds a collection of SQL queries used during the course. Due to the Server and Database not being accessible on this repo, they are for reference only. The server and data can be recreated utilizing the data stored in this repository. The data is located in *./sql_table_data/parch-and-posey.sql*. Input this SQL query into your application and run it to create the databse and tables.
+This folder holds a collection of SQL queries used during the course. Due to the Server and Database not being accessible on this repo, they are for reference only. The server and data can be recreated utilizing the data stored in this repository. The data is located in *./sql_table_data/parch-and-posey.sql*. Input this SQL query into your application and run it to create the databse and tables.
 
 #### Course Recap
+- Introduction to SQL: This holds a set of Keywords and examples for SQL 
 
 ## SQL Table Data
 
@@ -109,3 +111,49 @@ Then, open http://localhost/pgadmin4 in your browser.
 ## Environment.yml
 
 ## Parch and Posey Entity Relationship Diagram
+
+# Database Schema ER Diagram
+
+```mermaid
+erDiagram
+    web_events {
+        id INT PK
+        account_id INT FK
+        occurred_at TIMESTAMP
+        channel VARCHAR(255)
+    }
+    accounts {
+        id INT PK
+        name VARCHAR(255)
+        website VARCHAR(255)
+        lat DECIMAL
+        lang DECIMAL
+        primary_poc VARCHAR(255)
+        sales_rep_id INT FK
+    }
+    orders {
+        id INT PK
+        account_id INT FK
+        standard_qty INT
+        glossy_qty INT
+        total INT
+        occurred_at TIMESTAMP
+        standard_amt_usd DECIMAL
+        gloss_amyt_usd DECIMAL
+        poster_amt_usd DECIMAL
+        total_amount_usd DECIMAL
+    }
+    sales_reps {
+        id INT PK
+        name VARCHAR(255)
+        region_id INT FK
+    }
+    region {
+        id INT PK
+        name VARCHAR(255)
+    }
+    web_events ||--|| accounts : "Belongs to"
+    accounts ||--|| sales_reps : "Belongs to"
+    orders ||--|| accounts : "Belongs to"
+    sales_reps ||--|| region : "Belongs to"
+```
