@@ -1,6 +1,6 @@
 # Programming for Data Science
 
-The purpose of this repo is to capture the projects associated with the Udacity Nanodegree "Programming for Data Science with Python".
+The purpose of this repository is to capture and showcase the projects and lessons associated with the Udacity Nanodegree "Programming for Data Science with Python". It includes various resources, code examples, and reference materials to aid in learning and mastering data science programming skills.
 
 ## Table of Contents
 
@@ -21,9 +21,8 @@ The purpose of this repo is to capture the projects associated with the Udacity 
       - [Git Basics](#git-basics)
       - [Git Branching](#git-branching)
       - [Git Collaboration](#git-collaboration)
-    - [Introduction to the Command Line](#introduction-to-the-command-line)
-      - [Command Line Basics](#command-line-basics)
-      - [Advanced Command Line](#advanced-command-line)
+    - [Command Line Essentials](#command-line-essentials)
+      - [References](#references)
   - [Environment.yml](#environmentyml)
 
 ## Lessons
@@ -186,15 +185,17 @@ This section covers creating and managing branches in Git, including merging bra
 
 This section covers collaborating with others using Git, including cloning repositories, pushing changes, and creating pull requests.
 
-### Introduction to the Command Line
+### Command Line Essentials
 
-#### Command Line Basics
+This course covers utilizing the Command Line.
 
-This section covers the basics of using the command line, including navigating the file system and managing files and directories.
+#### References
 
-#### Advanced Command Line
+This folder contains reference materials for the Command Line Essentials course.
 
-This section covers advanced command line topics such as scripting and automation.
+- [Bash Reference](./command_line_essentials/references/bash_reference.md)
+- [Cheatsheet for Mac](./command_line_essentials/references/cheatsheet_for_mac.md)
+- [Bash Profile](./command_line_essentials/references/bash_profile.md)
 
 ## Environment.yml
 

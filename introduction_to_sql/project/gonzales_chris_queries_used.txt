@@ -18,7 +18,7 @@ SELECT t1.genre
  GROUP BY t1.standard_quartile
          , t1.genre
  ORDER BY 1
-        , 2
+        , 2;
         
 /*Query 2 - query used for second insight*/
 WITH RENTAL_DATA AS
@@ -82,7 +82,7 @@ SELECT *
        , total_payment - LAG(total_payment, 1) OVER (PARTITION BY fullname ORDER BY pay_mon) AS delta_payment
 FROM TOP_10_CUST
 ORDER BY 2
-       , 1
+       , 1;
        
 /* Query 4 - used to query for insight 4*/
 SELECT t1.film_title
