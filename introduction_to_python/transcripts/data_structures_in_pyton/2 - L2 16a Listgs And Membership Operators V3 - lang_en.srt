@@ -1,0 +1,204 @@
+1
+00:00:01,490 --> 00:00:04,769
+We've seen individual pieces of data,
+
+2
+00:00:04,769 --> 00:00:08,039
+like a string or a number. These are great.
+
+3
+00:00:08,039 --> 00:00:11,549
+But Python's capability to write powerful programs is
+
+4
+00:00:11,550 --> 00:00:15,565
+maximized when we can work with something called containers of data.
+
+5
+00:00:15,564 --> 00:00:19,589
+Which contain other datatypes and even other containers.
+
+6
+00:00:19,589 --> 00:00:23,875
+So let's introduce our first Python container, lists.
+
+7
+00:00:23,875 --> 00:00:30,344
+A list is a data structure in Python that is a mutable ordered sequence of elements,
+
+8
+00:00:30,344 --> 00:00:33,820
+more on the mutable ordered part later.
+
+9
+00:00:34,229 --> 00:00:37,939
+This code defines a variable months,
+
+10
+00:00:37,939 --> 00:00:40,074
+which contains a list of strings.
+
+11
+00:00:40,075 --> 00:00:43,725
+Each element in the list is a month of the year.
+
+12
+00:00:43,725 --> 00:00:46,730
+A list is defined using square brackets,
+
+13
+00:00:46,729 --> 00:00:50,824
+and always holds other data which are separated by commas.
+
+14
+00:00:50,825 --> 00:00:55,705
+This data could be a mix of any of the datatypes you've already seen.
+
+15
+00:00:55,704 --> 00:00:57,670
+Lists have an order,
+
+16
+00:00:57,670 --> 00:01:00,200
+or more appropriately are ordered.
+
+17
+00:01:00,200 --> 00:01:04,625
+We can look up individual elements in the list by their index.
+
+18
+00:01:04,625 --> 00:01:07,734
+We can look up values in a list like this,
+
+19
+00:01:07,734 --> 00:01:09,605
+we type in the list name,
+
+20
+00:01:09,605 --> 00:01:15,844
+followed by square brackets with an integer indicating its position or index.
+
+21
+00:01:15,844 --> 00:01:18,530
+Notice that the first element in the list,
+
+22
+00:01:18,530 --> 00:01:21,534
+January is located at index zero,
+
+23
+00:01:21,534 --> 00:01:23,450
+rather than index one.
+
+24
+00:01:23,450 --> 00:01:28,954
+Many programming languages follow this convention, called zero-based indexing.
+
+25
+00:01:28,954 --> 00:01:31,795
+If zero-based indexing is confusing,
+
+26
+00:01:31,795 --> 00:01:33,070
+consider it this way.
+
+27
+00:01:33,069 --> 00:01:38,944
+An element's index describes how far the element is from the beginning of the list.
+
+28
+00:01:38,944 --> 00:01:43,019
+The first element is zero elements away from the beginning.
+
+29
+00:01:43,019 --> 00:01:46,939
+The second one is one element away, and so on.
+
+30
+00:01:46,939 --> 00:01:49,995
+We can also index from the end of the list,
+
+31
+00:01:49,995 --> 00:01:53,100
+rather than the front like we've been doing so far.
+
+32
+00:01:53,099 --> 00:01:55,909
+To do this, we use negative indices.
+
+33
+00:01:55,909 --> 00:01:59,530
+For example, we can get the last month of the year.
+
+34
+00:01:59,530 --> 00:02:03,799
+The index negative one refers to the last element of the list.
+
+35
+00:02:03,799 --> 00:02:07,909
+Negative two to the second to last, and so on.
+
+36
+00:02:07,909 --> 00:02:11,454
+Note that while zero is the first index of the list,
+
+37
+00:02:11,455 --> 00:02:13,655
+negative zero is not the last,
+
+38
+00:02:13,655 --> 00:02:15,530
+which can be a bit confusing.
+
+39
+00:02:15,530 --> 00:02:20,754
+If you attempt to access an index in a list that does not exist,
+
+40
+00:02:20,754 --> 00:02:23,740
+you will get a list index exception.
+
+41
+00:02:23,740 --> 00:02:26,540
+This is Python's way of telling you that you are
+
+42
+00:02:26,539 --> 00:02:30,094
+trying to access an index that is not in the list.
+
+43
+00:02:30,094 --> 00:02:33,300
+Since the index 25 does not exist,
+
+44
+00:02:33,300 --> 00:02:35,705
+we receive this error.
+
+45
+00:02:35,705 --> 00:02:38,490
+Getting index errors is quite common,
+
+46
+00:02:38,490 --> 00:02:41,360
+especially if you're not used to indexing in Python.
+
+47
+00:02:41,360 --> 00:02:44,515
+You might get these errors quite a lot in the beginning.
+
+48
+00:02:44,514 --> 00:02:50,454
+The most common reason for getting an index error is using an index that's off by one,
+
+49
+00:02:50,455 --> 00:02:54,055
+but there may be other reasons why you would get such an error.
+
+50
+00:02:54,055 --> 00:02:59,745
+It is always a good idea to use the print function and debug with the small example.
+
+51
+00:02:59,745 --> 00:03:04,120
+This can tell you if your indexing is off, and by how much.
+

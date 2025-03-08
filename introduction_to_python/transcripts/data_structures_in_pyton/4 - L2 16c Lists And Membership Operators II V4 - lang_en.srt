@@ -1,0 +1,104 @@
+1
+00:00:02,540 --> 00:00:05,970
+So, how are lists different from strings?
+
+2
+00:00:05,969 --> 00:00:08,279
+You saw that both support indexing,
+
+3
+00:00:08,279 --> 00:00:10,704
+slicing, and the in operator.
+
+4
+00:00:10,705 --> 00:00:15,175
+The most obvious difference is that strings are sequences of letters,
+
+5
+00:00:15,175 --> 00:00:18,580
+while list elements can be any type of object.
+
+6
+00:00:18,579 --> 00:00:24,344
+Or more subtle difference is that lists can be modified but strings can't.
+
+7
+00:00:24,344 --> 00:00:31,199
+Here, we can change the fourth element index three of this list to Friday, if you want.
+
+8
+00:00:31,199 --> 00:00:36,339
+But here, we get an error if we tried to change the third element of a string.
+
+9
+00:00:36,340 --> 00:00:39,170
+The technical term for whether an object can be
+
+10
+00:00:39,170 --> 00:00:43,010
+modified after its creation is mutability.
+
+11
+00:00:43,009 --> 00:00:45,625
+We can modify the values of lists.
+
+12
+00:00:45,625 --> 00:00:48,140
+So, a list is an mutable data type.
+
+13
+00:00:48,140 --> 00:00:50,399
+We can't modify strings,
+
+14
+00:00:50,399 --> 00:00:53,454
+so a string is an immutable data type.
+
+15
+00:00:53,454 --> 00:00:56,238
+As we introduce more data types,
+
+16
+00:00:56,238 --> 00:00:59,324
+there are two factors that we will continue to consider.
+
+17
+00:00:59,325 --> 00:01:03,585
+One is mutability, and the other is order.
+
+18
+00:01:03,585 --> 00:01:08,204
+Order is whether the order of contents for an object matters,
+
+19
+00:01:08,204 --> 00:01:13,069
+and whether or not, part of the object can be accessed using this order.
+
+20
+00:01:13,069 --> 00:01:16,189
+Both strings and lists are ordered,
+
+21
+00:01:16,189 --> 00:01:18,944
+which is why indexing works well for them.
+
+22
+00:01:18,944 --> 00:01:23,000
+However, one is mutable while the other is not.
+
+23
+00:01:23,000 --> 00:01:25,519
+We will see more data types that fall under
+
+24
+00:01:25,519 --> 00:01:28,685
+different sections of this grid as we continue.
+
+25
+00:01:28,685 --> 00:01:33,890
+For now, we'll explore the methods and functions that work on lists,
+
+26
+00:01:33,890 --> 00:01:37,719
+and we'll take advantage of list mutability in our programs.
+

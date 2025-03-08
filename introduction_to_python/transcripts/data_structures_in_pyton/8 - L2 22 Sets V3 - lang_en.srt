@@ -1,0 +1,120 @@
+1
+00:00:02,720 --> 00:00:06,330
+Imagine that you run a popular search engine,
+
+2
+00:00:06,330 --> 00:00:09,830
+and you've surveyed your users to see where they're browsing from.
+
+3
+00:00:09,830 --> 00:00:12,939
+You've collected the 785 responses,
+
+4
+00:00:12,939 --> 00:00:15,899
+and I have assembled them into a list of countries.
+
+5
+00:00:15,900 --> 00:00:19,179
+There are 785 countries in the world,
+
+6
+00:00:19,179 --> 00:00:22,644
+which means that there are duplicate entries in the country's list.
+
+7
+00:00:22,644 --> 00:00:26,879
+Slicing the list to see the first few elements confirms this.
+
+8
+00:00:26,879 --> 00:00:30,079
+It will be useful to remove the duplicates to
+
+9
+00:00:30,079 --> 00:00:33,769
+produce a list of all the countries that users browse from.
+
+10
+00:00:33,770 --> 00:00:37,040
+Well, a set in Python does exactly that.
+
+11
+00:00:37,039 --> 00:00:41,879
+Sets are containers of unique elements without any particular ordering.
+
+12
+00:00:41,880 --> 00:00:45,330
+We can create a set from a list like this.
+
+13
+00:00:45,329 --> 00:00:47,634
+Set removes the duplicates,
+
+14
+00:00:47,634 --> 00:00:50,254
+and the Print function prints the unique values,
+
+15
+00:00:50,255 --> 00:00:53,245
+of which there are 196 countries.
+
+16
+00:00:53,244 --> 00:00:57,414
+Set support the in-operator the same way lists do.
+
+17
+00:00:57,414 --> 00:00:59,865
+India is in this set.
+
+18
+00:00:59,865 --> 00:01:04,275
+You can add elements to sets where you don't use the append method,
+
+19
+00:01:04,275 --> 00:01:05,665
+like you do with lists.
+
+20
+00:01:05,665 --> 00:01:08,450
+Instead, sets have the add method.
+
+21
+00:01:08,450 --> 00:01:10,674
+Here, Italy is added.
+
+22
+00:01:10,674 --> 00:01:14,250
+Sets also have a pop method just like lists.
+
+23
+00:01:14,250 --> 00:01:16,469
+When you pop an element from a set,
+
+24
+00:01:16,469 --> 00:01:18,724
+a random element is removed.
+
+25
+00:01:18,724 --> 00:01:21,544
+Remember that sets, unlike lists,
+
+26
+00:01:21,545 --> 00:01:24,935
+are unordered, so there is no last element.
+
+27
+00:01:24,935 --> 00:01:30,405
+Other operations you can perform with sets include those of mathematical sets.
+
+28
+00:01:30,405 --> 00:01:33,545
+Methods like union, intersection,
+
+29
+00:01:33,545 --> 00:01:36,829
+and difference are easy to perform with sets and
+
+30
+00:01:36,829 --> 00:01:40,760
+are much faster than such operators with other containers.
+

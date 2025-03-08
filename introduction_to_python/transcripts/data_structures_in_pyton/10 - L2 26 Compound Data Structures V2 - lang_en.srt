@@ -1,0 +1,56 @@
+1
+00:00:02,209 --> 00:00:05,910
+In the elements dictionary we saw earlier,
+
+2
+00:00:05,910 --> 00:00:11,675
+element names which are strings are mapped to their atomic numbers, which are integers.
+
+3
+00:00:11,675 --> 00:00:15,595
+But what if we wanted to store more information about each element,
+
+4
+00:00:15,595 --> 00:00:17,769
+like their weight and symbol.
+
+5
+00:00:17,769 --> 00:00:21,660
+We can do that by adjusting this dictionary so that it maps
+
+6
+00:00:21,660 --> 00:00:26,359
+the element names to another dictionary that stores that collection of data.
+
+7
+00:00:26,359 --> 00:00:29,189
+We can look up information about an entry in
+
+8
+00:00:29,190 --> 00:00:32,840
+this nested dictionary in the same way as we did before.
+
+9
+00:00:32,840 --> 00:00:35,775
+With square brackets or the get method.
+
+10
+00:00:35,774 --> 00:00:40,574
+We can look up specific information from the Helium dictionary like this.
+
+11
+00:00:40,575 --> 00:00:44,030
+This code is first looking up the key helium in
+
+12
+00:00:44,030 --> 00:00:48,245
+the elements dictionary producing the Helium dictionary.
+
+13
+00:00:48,244 --> 00:00:50,324
+The second lookup weight,
+
+14
+00:00:50,325 --> 00:00:56,160
+then looks up the weight key in that Helium dictionary to find helium's atomic weight.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:03,419
+Welcome to this lesson on data structures.
+
+2
+00:00:03,419 --> 00:00:08,460
+So far, you've dealt with variables representing individual basic data types,
+
+3
+00:00:08,460 --> 00:00:12,460
+like integers, floats, Booleans, and strings.
+
+4
+00:00:12,460 --> 00:00:15,330
+In this lesson, you'll learn how to group and
+
+5
+00:00:15,330 --> 00:00:18,225
+order these data types into different data structures,
+
+6
+00:00:18,225 --> 00:00:22,010
+namely: lists, tuples, sets,
+
+7
+00:00:22,010 --> 00:00:24,515
+dictionaries, and compound data structures.
+
+8
+00:00:24,515 --> 00:00:27,179
+You'll also learn about the last two types of
+
+9
+00:00:27,179 --> 00:00:30,963
+operators in Python: membership and identity,
+
+10
+00:00:30,963 --> 00:00:35,679
+along with more built-in functions and methods. Let's get started.
+

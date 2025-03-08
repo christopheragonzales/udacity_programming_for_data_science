@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:05,240
+Previously, when we created a variable that held an immutable object,
+
+2
+00:00:05,240 --> 00:00:09,009
+the value of that immutable object was saved in memory.
+
+3
+00:00:09,009 --> 00:00:12,599
+Here, we create a name with value Jim,
+
+4
+00:00:12,599 --> 00:00:15,559
+and assign it to another variable called student.
+
+5
+00:00:15,560 --> 00:00:19,144
+It is the value Jim that is assigned to student.
+
+6
+00:00:19,144 --> 00:00:22,890
+So when we reassign name to update it to Tim,
+
+7
+00:00:22,890 --> 00:00:26,469
+this change is not reflected in the value of student.
+
+8
+00:00:26,469 --> 00:00:30,410
+Lists are different from strings as they are mutable.
+
+9
+00:00:30,410 --> 00:00:37,215
+Here, we create a list of scores and assign the same list to the variable grades: B,
+
+10
+00:00:37,215 --> 00:00:40,425
+C, A, D, B,
+
+11
+00:00:40,424 --> 00:00:42,354
+A, six of them,
+
+12
+00:00:42,354 --> 00:00:48,769
+and when we change or mutate the scores list making the fourth grade B instead of D,
+
+13
+00:00:48,770 --> 00:00:52,345
+this affects both scores and grades.
+
+14
+00:00:52,344 --> 00:00:57,524
+Both scores and grades are variable names for the same underlying list,
+
+15
+00:00:57,524 --> 00:01:01,780
+and either name can be used to access and change that list.
+
+16
+00:01:01,780 --> 00:01:07,924
+The behavior of variables containing mutable and immutable objects are very different,
+
+17
+00:01:07,924 --> 00:01:10,399
+and might even seem surprising at times.
+
+18
+00:01:10,400 --> 00:01:14,650
+Experiment, use the print functions and double check your work where you
+
+19
+00:01:14,650 --> 00:01:19,520
+can to make sure that your programs correctly keep track of their data.
+
+20
+00:01:19,519 --> 00:01:22,069
+While you experiment with lists,
+
+21
+00:01:22,069 --> 00:01:25,109
+there are some useful functions you should get familiar with.
+
+22
+00:01:25,109 --> 00:01:28,959
+Len returns how many elements are in a list,
+
+23
+00:01:28,959 --> 00:01:32,469
+max returns the greatest element of a list.
+
+24
+00:01:32,469 --> 00:01:38,545
+How the greatest element is determined depends on what type of objects are in your list.
+
+25
+00:01:38,545 --> 00:01:43,125
+The maximum element in a list of numbers is the largest number.
+
+26
+00:01:43,125 --> 00:01:46,939
+The maximum element in a list of strings is
+
+27
+00:01:46,939 --> 00:01:51,274
+the element that would occur last if the list was sorted alphabetically.
+
+28
+00:01:51,275 --> 00:01:54,395
+That's reticulated python for this list.
+
+29
+00:01:54,394 --> 00:01:57,420
+R is the largest letter alphabetically.
+
+30
+00:01:57,420 --> 00:02:00,329
+In other words, greater than B,
+
+31
+00:02:00,329 --> 00:02:02,474
+A, B, and A.
+
+32
+00:02:02,474 --> 00:02:05,569
+This works because the max function is
+
+33
+00:02:05,569 --> 00:02:09,430
+defined in terms of the greater than comparison operator.
+
+34
+00:02:09,430 --> 00:02:14,605
+The greater than comparison operator is defined for many non-numeric types.
+
+35
+00:02:14,604 --> 00:02:18,125
+If you're working with objects that can be compared with this,
+
+36
+00:02:18,125 --> 00:02:21,159
+then you can use max on a list of the objects.
+
+37
+00:02:21,159 --> 00:02:25,055
+For strings, the standard comparison is alphabetical.
+
+38
+00:02:25,055 --> 00:02:29,885
+So the maximum of this list is the element that appears last alphabetically.
+
+39
+00:02:29,884 --> 00:02:35,454
+Although you can create lists that hold a mix of elements of many types as you see here,
+
+40
+00:02:35,455 --> 00:02:39,050
+integers and texts, the max function is undefined for
+
+41
+00:02:39,050 --> 00:02:42,930
+lists that contain elements from different incomparable types.
+
+42
+00:02:42,930 --> 00:02:47,284
+Here, you can see it breaks with this mix of datatypes.
+
+43
+00:02:47,284 --> 00:02:52,689
+Min is the opposite of max and returns the smallest element in a list.
+
+44
+00:02:52,689 --> 00:02:56,240
+Sorted returns a copy of a list in order from
+
+45
+00:02:56,240 --> 00:03:00,495
+smallest to largest leaving the original list unchanged.
+
+46
+00:03:00,495 --> 00:03:03,235
+Here, for a list called sizes,
+
+47
+00:03:03,235 --> 00:03:05,200
+the order is ascending.
+
+48
+00:03:05,199 --> 00:03:08,089
+You can sort from largest to smallest by
+
+49
+00:03:08,090 --> 00:03:11,194
+adding the optional argument reverse equals true.
+
+50
+00:03:11,194 --> 00:03:13,759
+Now, the order is descending.
+

@@ -1,0 +1,128 @@
+1
+00:00:03,049 --> 00:00:07,649
+In addition to accessing individual elements from a list,
+
+2
+00:00:07,650 --> 00:00:12,585
+we can use Python's slicing notation to access a subsequence of a list.
+
+3
+00:00:12,585 --> 00:00:19,225
+Slicing, means using indices to slice off parts of an object like a string or a list.
+
+4
+00:00:19,225 --> 00:00:21,810
+An example makes it super clear.
+
+5
+00:00:21,809 --> 00:00:25,184
+Again, consider this list of months.
+
+6
+00:00:25,184 --> 00:00:30,399
+We can slice the third quarter of the year from the month's list like this.
+
+7
+00:00:30,399 --> 00:00:33,054
+The index to the left of the colon,
+
+8
+00:00:33,054 --> 00:00:35,670
+six is where the slice begins.
+
+9
+00:00:35,670 --> 00:00:39,550
+The slice continues up to the second index, nine.
+
+10
+00:00:39,549 --> 00:00:42,859
+Notice that the six is the index of July,
+
+11
+00:00:42,859 --> 00:00:45,619
+but nine is the index of October.
+
+12
+00:00:45,619 --> 00:00:48,094
+The lower bound is inclusive,
+
+13
+00:00:48,094 --> 00:00:50,839
+but the upper bound is exclusive.
+
+14
+00:00:50,840 --> 00:00:55,845
+There are couple of slicing shortcuts that simplify common situations.
+
+15
+00:00:55,844 --> 00:01:00,979
+If you would like to make a slice that begins at the very beginning of the original list,
+
+16
+00:01:00,979 --> 00:01:03,924
+you can omit the starting index like this,
+
+17
+00:01:03,924 --> 00:01:09,405
+or if you'd like to make a slice that ends at the very end of the original list,
+
+18
+00:01:09,405 --> 00:01:12,400
+you can omit the ending index like this.
+
+19
+00:01:12,400 --> 00:01:17,040
+List is a type just like string, float, and int.
+
+20
+00:01:17,040 --> 00:01:18,870
+Of the types we've seen,
+
+21
+00:01:18,870 --> 00:01:21,740
+lists are most similar to strings.
+
+22
+00:01:21,739 --> 00:01:26,854
+Both types support the len function, indexing, and slicing.
+
+23
+00:01:26,855 --> 00:01:31,890
+Here, you can see that the length of the string is the number of characters,
+
+24
+00:01:31,890 --> 00:01:35,875
+and the length of the list is a number of elements it holds,
+
+25
+00:01:35,875 --> 00:01:38,870
+and zero indexing is supported for both,
+
+26
+00:01:38,870 --> 00:01:41,960
+as well as slicing based on the indices shown here.
+
+27
+00:01:41,959 --> 00:01:47,354
+Another thing they both support are membership operators, in and not.
+
+28
+00:01:47,355 --> 00:01:53,240
+In, evaluates if the object on the left side is included in the object on the right side,
+
+29
+00:01:53,239 --> 00:01:55,969
+and not in evaluates if the object on
+
+30
+00:01:55,969 --> 00:01:59,969
+the left side is not included in the object on the right side.
+
+31
+00:01:59,969 --> 00:02:05,795
+Here, we can check if the string her is in this string, which is right here.
+
+32
+00:02:05,795 --> 00:02:11,080
+However, Sunday is not in our list as it only holds the months.
+
